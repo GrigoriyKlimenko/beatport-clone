@@ -1,0 +1,30 @@
+.search_string {
+    display: inline-block;
+    background: #282828;
+    height: 35px;
+    max-width: 275px;
+    border-radius: 5px;
+    color: #fff;
+    
+}
+
+.search_string {
+    display: flex;
+}
+
+.search_string span{
+    margin: auto 10px;
+}
+
+.search_string input {
+    background: none;
+    border: 0;
+    font-size: 17px;
+    color: #f5f5f5
+}
+
+@media screen and (max-width: 1366px) {
+    .search_container {
+        display: none;
+    }
+}

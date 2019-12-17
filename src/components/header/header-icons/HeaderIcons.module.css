@@ -1,0 +1,67 @@
+.icons_container {
+    display: flex;
+    color: #fff;
+    flex: 1 0 auto;
+    justify-content: flex-end;
+}
+
+.icons_container > div {
+    padding: 0 10px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.my_beatport {
+    position: relative;
+}
+
+.my_beatport_button {
+    display: flex;
+    align-items: center;
+}
+
+.my_beatport_button span:last-child{
+    font-size: 12px;
+    font-weight: 700;
+    padding-left: 5px;
+}
+
+.login {
+    position: relative;
+}
+
+.login_drop,
+.my_beatport_drop {
+    visibility: hidden;
+}
+
+.login:hover .login_drop,
+.my_beatport:hover .my_beatport_drop,
+.login_drop:hover,
+.my_beatport_drop:hover {
+    visibility: visible;
+}
+
+.login:hover,
+.my_beatport:hover {
+    color: #94d500;
+}
+
+.shop:hover {
+    color: #ff53a0;
+}
+
+@media screen and (min-width: 1366px) {
+    .search {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .my_beatport_text {
+        display: none;
+    }
+}

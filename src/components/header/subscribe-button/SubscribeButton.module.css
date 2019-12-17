@@ -1,0 +1,26 @@
+.subscribe {
+    display: flex;
+    margin: 0 2rem;
+}
+
+.subscribe button {
+    color: #262626;
+    height: 2rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #94d500;
+    transition: background-color .25s;
+    border-radius: 3px;
+    padding: 0 12px;
+}
+
+.subscribe button:hover {
+    background-color: #72a300;
+}
+
+@media screen and (max-width: 568px) {
+    .subscribe {
+        display: none;
+    }
+}

@@ -1,0 +1,332 @@
+.topten {
+    box-sizing: border-box;
+    background: rgba(55, 55, 55, .8);
+    padding: 15px 0;
+    width: 100%;
+    position: relative;
+}
+
+.topten_heading {
+    margin: 0 15px 15px;
+    padding: 0 0 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #5a5a5a;
+}
+
+.topten_heading_buttons {
+    display: flex;
+    margin-right: 15px;
+    align-items: center;
+    position: relative;
+    height: 37px;
+    border-radius: 18.5px;
+    transition: background .2s;
+    background: none;
+}
+
+.topten_heading_buttons:hover {
+    background: rgba(73, 73, 73, .75);
+}
+
+.topten_heading_play, .topten_heading_queue {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 37px;
+    width: 37px;
+    border-radius: 18.5px;
+    transition: background .2s;
+    cursor: pointer;
+}
+
+.topten_heading_play {
+    background: #5a5a5a;
+}
+
+.topten_heading_play:hover {
+    background: #4d4d4d;
+}
+
+.topten_heading_queue {
+    background: none;
+}
+
+.topten_heading_logo {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    height: 30px;
+}
+
+.topten_item {
+    margin: 0 0 15px;
+    display: inline-block;
+    position: relative;
+    height: 93px;
+    padding: 10px 0 7px 15px;
+    width: 100%;
+    background: none;
+    box-sizing: border-box;
+}
+
+.topten_place {
+    color: #8c8c8c;
+    font-family: Oswald, CoreSans, sans-serif;
+    font-size: 2.8em;
+    font-weight: 300;
+    width: 20px;
+    height: 93px;
+    float: left;
+    text-align: center;
+    line-height: 1.25;
+}
+
+.mobile_actions_shadow {
+display: none;
+}
+
+.topten_info {
+    width: calc(100% - 35px);
+    margin-left: 15px;
+    float: left;
+}
+
+.topten_info>span {
+    display: block;
+    margin-bottom: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.topten_title {
+    color: #fff;
+    height: 19px;
+    letter-spacing: .02em;
+    font-weight: 700;
+    font-size: 1.4em;
+    display: block;
+    overflow: hidden;
+    text-overflow: inherit;
+}
+
+.topten_mixed {
+    padding-left: 5px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.topten_authors>a {
+    color: #39c1de;
+    letter-spacing: .02em;
+    height: 17px;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.topten_label {
+    color: #8c8c8c;
+    height: 17px;
+    letter-spacing: .02em;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.topten_viewmore {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+    font: 700 12px CoreSans, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.topten_viewmore>span {
+    display: block;
+}
+
+.topten_item_actions {
+    display: none;
+    width: 100%;
+    overflow: visible;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    left: 0;
+    top: 0;
+    background: none;
+}
+
+.topten_actions_play_queue {
+    width: 50px;
+    margin: 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+}
+
+.item_actions_play, .item_actions_queue {
+    color: #fff;
+}
+
+.item_actions_play:hover, .item_actions_queue:hover {
+    filter: drop-shadow(0 0 7px #fff);
+}
+
+.topten_actions_buy {
+    float: right;
+    margin: 28px 20px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item_buy_default {
+    background: #ff53a0;
+    color: #fff;
+    font-weight: 700;
+    padding: 6px 8px 5px;
+    height: 25px;
+    border-radius: 3px 0 0 3px;
+    top: 0;
+    margin: 0;
+    transition: background .2s;
+}
+
+.item_buy_menu {
+    background: #d64988;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 0 3px 3px 0;
+    top: 0;
+    margin: 0;
+    transition: background .2s;
+}
+
+.mobile_actions_button {
+    display: none;
+    float: right;
+    border-left: 1px solid black;
+    width: 40px;
+}
+
+.mobile_actions_show {
+    composes: topten_item_actions;
+    opacity: 1 !important;
+    width: calc(100% - 40px) !important;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+}
+
+@media screen and (max-width: 1150px) {
+    .topten {
+        background: none;
+    }
+
+    .topten_item {
+        background: rgba(55, 55, 55, .8);
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .topten_heading {
+        margin: 0 0 15px;
+    }
+
+    .mobile_actions_button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+    }
+
+    .topten_info {
+        width: calc(100% - 100px);
+        margin-left: 0;
+        padding-top: 15px;
+    }
+
+    .topten_place {
+        font-size: 2.3em;
+        width: 45px;
+        padding-top: 15px;
+    }
+
+    .topten_item_actions {
+        opacity: 0;
+        width: 0;
+    }
+
+    .mobile_actions_shadow {
+        display: block;
+        width: 45px;
+        height: 93px;
+        content: "";
+        background: rgba(38,38,38,.7);
+    }
+
+    .topten_actions_play_queue,
+    .topten_actions_buy {
+        box-sizing: border-box;
+        background: #373737;
+        width: calc(50% - 22.5px);
+        height: 100%;
+        margin: 0;
+        align-items: center;
+    }
+    .topten_actions_play_queue {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .topten_actions_buy {
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    .topten_item:hover:hover .topten_item_actions {
+        display: flex;
+    }
+
+    .topten_item:hover .topten_place {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .topten_item {
+        width: calc(50% - 7.5px);
+    }
+
+    .topten_item:nth-child(2n) {
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .topten_item {
+        width: 100%;
+    }
+    
+    .topten_item:nth-child(2n) {
+        margin-left: 0;
+    }
+}

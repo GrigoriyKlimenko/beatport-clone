@@ -1,0 +1,129 @@
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex: 1;
+    flex: 1;
+    margin-top: 0;
+}
+
+.slider_container {
+    margin-top: 10px;
+}
+
+.scroll_arrows {
+    display: block;
+    margin: 5px 0 0 15px;
+    float: right;
+}
+
+.scroll_arrow_left,
+.scroll_arrow_right {
+    display: inline-block;
+    background: #494949;
+    font-size: 6px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.scroll_arrow_right {
+    margin-left: 6px;
+}
+
+.scroll_arrow_off {
+    opacity: .5;
+    cursor: default;
+    color: #8c8c8c;
+}
+
+.slider_container {
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.slider_item {
+    overflow: hidden;
+    position: relative;
+    margin: 0 0 10px;
+    box-sizing: border-box;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.slider_item_container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.artwork_container {
+    position: absolute;
+    top: -35px;
+}
+
+.artwork {
+    width: 100%;
+}
+
+.gradient_overlay {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+}
+
+.gradient_overlay::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(0deg,#000 0,transparent 50%);
+}
+
+.dj_name {
+    position: absolute;
+    z-index: 5;
+    left: 5px;
+    bottom: 5px;
+    padding: 5px;
+    display: inline-block;
+    width: auto;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 1150px) {
+    .slider_container {
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .slider_item {
+        width: calc((100% - 30.2px)/3);
+        margin-right: 15px;
+    }
+
+    .slider_item:last-child {
+        margin-right: 0;
+    }
+
+    .slider_item:after {
+        content: "";
+        padding-top: 100%;
+        display: block;
+      }
+
+    .artwork_container {
+        position: relative;
+        top: 0;
+    }
+}
